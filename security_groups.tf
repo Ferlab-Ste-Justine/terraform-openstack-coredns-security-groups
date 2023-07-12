@@ -10,7 +10,7 @@ resource "openstack_networking_secgroup_v2" "coredns_bastion" {
   delete_default_rules = true
 }
 
-//Allow all outbound traffic from etcd members and bastion
+//Allow all outbound traffic from coredns servers and bastion
 resource "openstack_networking_secgroup_rule_v2" "coredns_server_outgoing_v4" {
   direction         = "egress"
   ethertype         = "IPv4"
