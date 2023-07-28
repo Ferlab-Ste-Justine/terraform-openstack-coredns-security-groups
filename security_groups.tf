@@ -50,7 +50,7 @@ resource "openstack_networking_secgroup_rule_v2" "coredns_server_external_icmp_a
   direction         = "ingress"
   ethertype         = "IPv6"
   protocol          = "ipv6-icmp"
-  remote_ip_prefix  = "0.0.0.0/0"
+  remote_ip_prefix  = "::/0"
   security_group_id = openstack_networking_secgroup_v2.coredns_server.id
 }
 
